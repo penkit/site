@@ -8,6 +8,5 @@ RUN bundle install
 COPY . /opt/ruby/
 
 # Start server
-ENV PORT 8080
-EXPOSE PORT
-CMD ["rackup", "-o", "0.0.0.0", "-p", PORT]
+EXPOSE 8080
+CMD ["rackup", "-o", "0.0.0.0", "-p", "8080"]

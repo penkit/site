@@ -1,0 +1,2 @@
+body{height:100vh}div.wrapper{max-width:1000px;height:100vh;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center}a{text-decoration:none;color:#0dba89}h1{font-family:"Ubuntu Mono",monospace;letter-spacing:2px;font-size:4em}div.project-description p{font-family:"Noto Sans",sans-serif;text-align:center;font-size:1.3em;line-height:160%}ul.project-links{padding:0}ul.project-links li{display:inline-block;margin:0 20px}ul.project-links li a{font-size:4em}
+/*# sourceMappingURL=main.css.map */

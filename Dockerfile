@@ -7,9 +7,6 @@ COPY Gemfile* /opt/ruby/
 RUN bundle install
 COPY . /opt/ruby/
 
-# Upload source
-COPY . $APP_HOME
-
 # Start server
 ENV PORT 8080
 EXPOSE PORT

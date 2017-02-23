@@ -1,22 +1,16 @@
-FROM ruby:2.2.1
+FROM dhumphreys88/ruby:2.3
 
 MAINTAINER Sam Lachance <slachance@gmail.com>
 
-RUN apt-get update
-RUN apt-get upgrade -y
-
 # Install gems
-ENV APP_HOME /app
-ENV HOME /root
-RUN mkdir $APP_HOME
-WORKDIR $APP_HOME
-COPY Gemfile* $APP_HOME/
+COPY Gemfile* /opt/ruby/
 RUN bundle install
+COPY . /opt/ruby/
 
 # Upload source
 COPY . $APP_HOME
 
 # Start server
-ENV PORT 9292
-EXPOSE 9292
-CMD ["rackup", "-o", "0.0.0.0"]
+ENV PORT 8080
+EXPOSE PORT
+CMD ["rackup", "-o", "0.0.0.0", "-p", PORT]

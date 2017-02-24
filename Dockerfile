@@ -2,6 +2,8 @@ FROM dhumphreys88/ruby:2.3
 
 MAINTAINER Sam Lachance <slachance@gmail.com>
 
+RUN apk add --no-cache ruby-dev build-base
+
 # Install gems
 COPY Gemfile* /opt/ruby/
 RUN bundle install

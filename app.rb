@@ -1,6 +1,3 @@
-require 'uri'
-require 'json'
-
 get '/' do
   private_token = ENV["GITLAB_TOKEN"]
 

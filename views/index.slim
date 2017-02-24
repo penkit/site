@@ -5,15 +5,16 @@ ul.project-links
   li: a href="https://gitlab.com/penkit/" <i class="fa fa-gitlab" aria-hidden="true"></i>
   li: a href="https://hub.docker.com/u/penkit/" <i class="fa fa-th-large" aria-hidden="true"></i>
 
-div.repo-links
-  div.gitlab
-    table
-      - @git_results.first(10).each do |r|
+- unless @git_results[0].nil?
+  div.repo-links
+    div.gitlab
+      table
+        - @git_results.first(10).each do |r|
+          tr
+            td: a href="#{r["web_url"]}" penkit / #{r["name"]}
         tr
-          td: a href="#{r["web_url"]}" penkit / #{r["name"]}
-      tr
-        td: a href="/git" <strong>more</strong>
+          td: a href="/git" <strong>more</strong>
 
-  div.dockerhub
-    table
-      tr
+    div.dockerhub
+      table
+        tr

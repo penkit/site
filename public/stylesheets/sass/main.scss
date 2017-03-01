@@ -21,7 +21,7 @@ div.wrapper {
 
 a {
   text-decoration: none;
-  color: #0dba89;
+  color: $primary;
 }
 
 h1 {
@@ -48,56 +48,6 @@ ul.project-links {
 
     a {
       font-size: 4em;
-    }
-  }
-}
-
-div.repo-links {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-  div {
-    background-color: $primary-light;
-    margin: 0 10px;
-    border-radius: 3px;
-    display: inline-block;
-    min-width: 200px;
-    box-sizing: border-box;
-    padding: 5px;
-    color: $primary;
-    
-    table {
-      width: 100%;
-    }
-
-    &.gitlab {
-      text-align: right;
-      position: relative;
-
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -5px;
-        right: 33px;
-        width: 10px;
-        height: 10px;
-        background: $primary-light;
-        border-right:1px solid $primary-light;
-        border-bottom:1px solid $primary-light;
-        -moz-transform:rotate(-45deg);
-        -webkit-transform:rotate(-45deg);
-      }
-
-      td {
-        text-align: right;
-      }
-    }
-
-    &.dockerhub {
-      background-color: white;
-      color: white;
     }
   }
 }

@@ -1,9 +1,9 @@
 // Import sass variables
 @import 'colors';
 @import 'fonts';
-@import 'mixins';
 
 // Import mixins
+@import 'mixins';
 
 /******************** 
 General styles
@@ -78,7 +78,6 @@ ul.project-links {
 /******************** 
 Contact Page
 ********************/
-
 p.contact-cta {
   font-size: 1.4em;
   text-align: center;

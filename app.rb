@@ -2,6 +2,10 @@ get '/' do
   slim :index
 end
 
+get '/contact' do
+  slim :contact
+end
+
 get '/guides' do
   slim :guides
 end

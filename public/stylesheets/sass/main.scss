@@ -1,12 +1,13 @@
-$logo-font: 'Ubuntu Mono', monospace;
-$body-font: 'Noto Sans', sans-serif;
+// Import sass variables
+@import 'colors';
+@import 'fonts';
 
-// Colors
-$primary: #0dba89;
-$primary-light: #B9F4E4;
-
+/******************** 
+General styles
+********************/
 body {
   height: 100vh
+  color: $black;
 }
 
 div.wrapper {
@@ -30,6 +31,16 @@ h1 {
   font-size: 4em;
 }
 
+code {
+  padding: 3px 6px;
+  margin: 0 10px;
+  background-color: $gray-light;
+  border: 1px solid $gray;
+}
+
+/******************** 
+Home Page
+********************/
 div.project-description {
   p {
   font-family: $body-font;
@@ -52,6 +63,9 @@ ul.project-links {
   }
 }
 
+/******************** 
+Guide Page
+********************/
 div.guide {
   h1, h2, h3, h4, h5, h6 {
     span {
@@ -70,6 +84,9 @@ div.guide {
 
 }
 
+/******************** 
+404 Page
+********************/
 div.oops {
   text-align: center;
   
@@ -83,9 +100,3 @@ div.oops {
   }
 }
 
-code {
-  padding: 3px 6px;
-  margin: 0 10px;
-  background-color: #ededed;
-  border: 1px solid #dedede;
-}

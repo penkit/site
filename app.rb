@@ -10,7 +10,7 @@ get '/guides/:guide' do
   guide = params[:guide]
 
   begin
-    @example = File.open("#{File.dirname(__FILE__)}/guides/#{guide}.md", "rb").read
+    @body = File.open("#{File.dirname(__FILE__)}/guides/#{guide}.md", "rb").read
   rescue
     error 404
   end

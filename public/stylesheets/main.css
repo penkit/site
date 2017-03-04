@@ -1,2 +1,61 @@
-body{height:100vh}div.wrapper{max-width:1000px;height:100vh;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center}a{text-decoration:none;color:#0dba89}h1{font-family:"Ubuntu Mono",monospace;letter-spacing:2px;font-size:4em}div.project-description p{font-family:"Noto Sans",sans-serif;text-align:center;font-size:1.3em;line-height:160%}ul.project-links{padding:0}ul.project-links li{display:inline-block;margin:0 20px}ul.project-links li a{font-size:4em}div.guide h1 span,div.guide h2 span,div.guide h3 span,div.guide h4 span,div.guide h5 span,div.guide h6 span{display:none}div.guide h2{font-size:2.5em;text-align:center}div.guide h3{font-size:1.5em}div.oops{text-align:center}div.oops h2{font-size:6em;margin:40px 0 0}div.oops p{font-size:1.5em}code{padding:3px 6px;margin:0 10px;background-color:#ededed;border:1px solid #dedede}
-/*# sourceMappingURL=main.css.map */
+/*
+Error: Invalid CSS after "  color": expected ";", was ": $black;"
+        on line 10 of ./public/stylesheets/sass/main.scss
+
+5: /******************** 
+6: General styles
+7: ********************\/
+8: body {
+9:   height: 100vh
+10:   color: $black;
+11: }
+12: 
+13: div.wrapper {
+14:   max-width: 1000px;
+15:   height: 100vh;
+
+Backtrace:
+./public/stylesheets/sass/main.scss:10
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:777:in `block in try_declaration'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:1165:in `call'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:1165:in `rethrow'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:782:in `try_declaration'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:711:in `declaration_or_ruleset'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:665:in `block_contents'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/plugin.rb:82:in `update_stylesheets'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/plugin.rb:54:in `check_for_updates'
+/home/sam/.gem/ruby/2.2.6/gems/sass-3.4.22/lib/sass/plugin/rack.rb:51:in `call'
+/home/sam/.gem/ruby/2.2.6/gems/rack-1.6.4/lib/rack/tempfile_reaper.rb:15:in `call'
+/home/sam/.gem/ruby/2.2.6/gems/rack-1.6.4/lib/rack/lint.rb:49:in `_call'
+/home/sam/.gem/ruby/2.2.6/gems/rack-1.6.4/lib/rack/lint.rb:37:in `call'
+/home/sam/.gem/ruby/2.2.6/gems/rack-1.6.4/lib/rack/showexceptions.rb:24:in `call'
+/home/sam/.gem/ruby/2.2.6/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+/home/sam/.gem/ruby/2.2.6/gems/sinatra-1.4.8/lib/sinatra/base.rb:219:in `call'
+/home/sam/.gem/ruby/2.2.6/gems/rack-1.6.4/lib/rack/chunked.rb:54:in `call'
+/home/sam/.gem/ruby/2.2.6/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+/home/sam/.gem/ruby/2.2.6/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+/home/sam/.rubies/ruby-2.2.6/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+/home/sam/.rubies/ruby-2.2.6/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+/home/sam/.rubies/ruby-2.2.6/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  color\": expected \";\", was \": $black;\"\A         on line 10 of ./public/stylesheets/sass/main.scss\A \A 5: /******************** \A 6: General styles\A 7: ********************/\A 8: body {\A 9:   height: 100vh\A 10:   color: $black;\A 11: }\A 12: \A 13: div.wrapper {\A 14:   max-width: 1000px;\A 15:   height: 100vh;"; }

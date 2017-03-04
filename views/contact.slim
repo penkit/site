@@ -1,0 +1,13 @@
+h2 Contact Us
+p If you have any questions, comments, or interest in contributing, please feel free to contact us.
+ul.contact-methods
+  li: a class="contact-link "id="email-address" <i class="fa fa-gitlab" aria-hidden="true"></i>
+  li: a class="contact-link "href="https://twitter.com/penkitio" <i class="fa fa-twitter" aria-hidden="true"></i> Twitter
+  li: a class="contact-link "href="https://facebook.com/penkitio" <i class="fa fa-facebook-f" aria-hidden="true"></i> Facebook
+javascript:
+  // Used to prevent spam
+  var host = "penkit.io";
+  var username = "info";
+  var emailAddress = username + "@" + host;
+  document.getElementById("email-address").innerHTML = "<i class=\"fa fa-envelope-o\" aria-hidden=\"true\"></i> " + emailAddress
+  document.getElementById("email-address").href = "mailto:" + emailAddress

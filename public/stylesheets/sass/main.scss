@@ -52,6 +52,24 @@ ul.project-links {
   }
 }
 
+div.guide {
+  h1, h2, h3, h4, h5, h6 {
+    span {
+      display: none;
+    }
+  }
+
+  h2 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+}
+
 div.oops {
   text-align: center;
   
@@ -63,4 +81,11 @@ div.oops {
   p {
     font-size: 1.5em;
   }
+}
+
+code {
+  padding: 3px 6px;
+  margin: 0 10px;
+  background-color: #ededed;
+  border: 1px solid #dedede;
 }

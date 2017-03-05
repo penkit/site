@@ -1,0 +1,24 @@
+@mixin inline-ul {
+  padding: 0;
+  text-align: center;
+
+  li {
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+  }
+}
+
+@mixin button-large($border-color, $background-color, $text-color) {
+  font-size: 1.3em;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: 2px solid $border-color;
+  background-color: $background-color;
+  border-radius: 3px;
+  color: $text-color;
+  display: block;
+  min-width: 300px;
+  text-align: center;
+  letter-spacing: 1px;
+}

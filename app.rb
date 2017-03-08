@@ -10,6 +10,10 @@ get '/guides' do
   slim :guides
 end
 
+get '/install' do
+  slim :install
+end
+
 get '/guides/:guide' do
   guide = params[:guide]
 

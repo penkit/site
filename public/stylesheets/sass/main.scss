@@ -32,11 +32,15 @@ h3 {
   font-size: 1.5em;
 }
 
-code {
+code, pre {
   padding: 3px 6px;
   margin: 0 10px;
   background-color: $gray-light;
   border: 1px solid $gray;
+}
+
+pre {
+  line-height: 25px;
 }
 
 div.content {
@@ -187,13 +191,29 @@ a.contact-link {
 /******************** 
 Guide Page
 ********************/
-div.guide {
+div.guide, div.install-instructions {
   h1, h2, h3, h4, h5, h6 {
     span {
       display: none;
     }
   }
 }
+
+/******************** 
+Install Page
+********************/
+div.install-instructions {
+  margin: 30px 0;
+}
+
+a.guides {
+  @include button-large($primary, $white, $primary);
+}
+
+p.guides-cta {
+  font-size: 1.1em;
+}
+
 
 /******************** 
 404 Page

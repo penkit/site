@@ -6,6 +6,10 @@ get '/contact' do
   slim :contact
 end
 
+get '/about' do
+  slim :about
+end
+
 get '/guides' do
   slim :guides
 end

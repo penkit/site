@@ -13,6 +13,10 @@ body {
   color: $black;
 }
 
+p {
+  font-size: 17px;
+}
+
 div.wrapper {
   max-width: 1000px;
   margin: 0 auto;
@@ -30,6 +34,10 @@ h2 {
 
 h3 {
   font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.4em;
 }
 
 code, pre {
@@ -97,23 +105,21 @@ footer {
   ul.project-links {
     @include inline-ul;
   
-  li {
-    margin: 0 20px;
+    li {
+      margin: 0 20px;
 
-    a {
-      font-size: 2em;
+      a {
+        font-size: 2em;
+      }
     }
   }
 }
-}
-
 
 /******************** 
 Home Page
 ********************/
 div.project-description {
   
-
   p {
   font-family: $body-font;
   text-align: center;
@@ -187,6 +193,50 @@ a.contact-link {
   }
 }
 
+/******************** 
+About Page
+********************/
+div.project, div.maintainers {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+div.bios {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  div.bio {
+    width: 400px;
+    margin-bottom: 40px;
+
+    img {
+      width: 300px;
+      margin: 0 50px;
+      border-radius: 3px;
+    }
+
+    h4 {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    p {
+      height: 100px;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+  }
+
+  
+
+  div.contact a {
+    @include button-large($primary, $primary, $white);
+  }
+}
 
 /******************** 
 Guide Page

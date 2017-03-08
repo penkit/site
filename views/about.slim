@@ -1,0 +1,40 @@
+div.content
+  h2 About
+  div.project
+    h3 The project
+    p penkit is a software suite designed to help you hone your penetration testing skills. Using the power and flexibility of docker, we are able to build controlled, isolated environments for virtually any software vulnerablity out there. penkit has two major components: our strictly maintained image catalog and our full featured CLI application.
+    p Our goal with the docker image catalog is to have a comprehensive selection of in-house docker images that is carefully curated. This involves a stripped down build of Alpine Linux, our own package repository, and custom built top-level images. With this approach, we are able to have a completely controlled software environment that allows us to cleanly recreate virtually any vulnerability that is in the wild.
+    p The penkit CLI app (simply referred to as "penkit") is your interface to our library of images. With penkit, you are able to browse software environments by CVE, software stack, or vulnerability type. Once you select an environment you would like to practice in, penkit fetches the most recent images, spins up the required virtual containers, and networks everything together -- no Docker or programming knowlege is required. Once your software environment is running, penkit supplies you with any tool that you would need to exploit your target vulnerability.
+    p Simply put, our mission is provide security buffs with the tools necessary to quickly and painlessly spin up software environments to practice on. Your time is valuable and should be spent learning new things -- not configuring apache.
+
+
+  div.maintainers
+    h3 The maintainers
+    div.bios
+      div.bio.don
+        img src="/images/don.jpg" alt="don"/
+        h4.name Don
+        p Don started his career as a Ruby developer but now spends most of his days architecting large scale, complex docker environments. When Don isn't at work, he enjoys cycling, gaming, and going to concerts. Don's fish is named Morty.
+        div.contact
+          a#dons-email
+
+      div.bio.sam
+        img src="/images/sam.jpg" alt="sam"/
+        h4.name Sam
+        p Sam is a Ruby developer who builds learning management systems in Ruby on Rails. In his free time, Sam like to hike, play Overwatch, and talk on amateur radio. Sam's cat is named Mowmow.
+        div.contact
+          a#sams-email
+
+
+javascript:
+  // Used to prevent spam
+  function populateEmail(name){
+    var host = "penkit.io";
+    var id = name + "s-email";
+    var email = name + "@" + host;
+    document.getElementById(id).innerHTML = email;
+    document.getElementById(id).href = "mailto:" + email;
+  }
+  
+  populateEmail("don");
+  populateEmail("sam");

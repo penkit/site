@@ -113,6 +113,14 @@ footer {
       }
     }
   }
+
+  ul.legal {
+    @include inline-ul;
+    
+    li {
+      margin: 0 20px;
+    }
+  }
 }
 
 /******************** 

@@ -10,6 +10,10 @@ get '/about' do
   slim :about
 end
 
+get '/faq' do
+  slim :faq
+end
+
 get '/guides' do
   slim :guides
 end

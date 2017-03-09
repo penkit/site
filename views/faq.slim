@@ -1,0 +1,23 @@
+div.content
+  div.faq
+    h2 FAQ
+    div.question
+      h3 What is penkit?
+      p Penkit is a training tool for pentesters that uses Docker to create virtually any type of software environment. This flexibility allows us to recreate nearly any vulnerability for you to practice on.
+    div.question
+      h3 How should penkit be used?
+      p Penkit is exclusively for educational use on personal devices or systems. The use of penkit against any device or system without the owner's permission is expressly prohibited. <a href="/legal/TERMS.txt" target="_blank">Read more about this topic in our Terms of Service.</a>
+    div.question
+      h3 Isn't this kind of like <a href="https://community.rapid7.com/community/metasploit/blog/2016/11/15/test-your-might-with-the-shiny-new-metasploitable3">Metasploitable</a>?
+      p Well, kind of. Metasploitable is an excellent project that has a ton of vulnerabilities built in. But it runs a full fledged operating system in a virtual machine and uses quite a bit of disk space. While we share a similar goal (get people interested in security), we take a different approach to the problem.
+      p Unlike the Metasploitable disk image that runs in a virtual machine, we use <a href="https://docker.com">Docker</a> images to run lightweight "containers" right on top of your operating system. Each of our vulnerable images look just like networked computers to your pen testing tools, but they are really extremely lightweight, modular, software stacks with their own private sandboxes. Our image catalog is filled with these building blocks, which allow you to set up complex networks with many vulnerabilities without eating up your disk space.
+      p Don't worry, penkit does all of this for you. You're here to learn about pentesting — not how to install WordPress.
+    div.question
+      h3 Can I use your images in production?
+      p Technically you could but it would be a very, <strong>very</strong> bad idea. Our images are designed to be vulnerable. Using them in production is asking for trouble.
+    div.question
+      h3 Is penkit open source?
+      p Yes! We operate under the <a href="/legal/LICENSE.txt" target="_blank">MIT License.</a>
+    div.question
+      h3 How can I get in touch with you guys?
+      p Feel free to reach us at any of the methods listed on our <a href="/contact">contact page.</a>

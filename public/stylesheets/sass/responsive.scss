@@ -1,0 +1,17 @@
+@media only screen and (max-width: 500px) {
+  div.bios {
+    div.bio {
+      width: 100%;
+      margin: 0 0px 40px;
+
+      img {
+        width: 80%;
+        margin: 0 10%;
+      }
+
+      p {
+        height: auto;
+      }
+    } 
+  }
+}

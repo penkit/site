@@ -45,6 +45,7 @@ code, pre {
   margin: 0 10px;
   background-color: $gray-light;
   border: 1px solid $gray;
+  font-size: 16px;
 }
 
 pre {
@@ -52,7 +53,7 @@ pre {
 }
 
 div.content {
-  padding: 40px 10px;
+  padding: 60px 10px;
   box-sizing: border-box;
   min-height: 500px;
   display: flex;
@@ -252,6 +253,63 @@ FAQ Page
 
 div.question {
   margin-bottom: 50px;
+}
+
+/******************** 
+Guides Page
+********************/
+div.guides {
+  text-align: center;
+  margin-top: 40px;
+
+  div.guide-link {
+    display: inline-block;
+    max-width: 300px;
+    margin: 0 10px 50px;
+
+    div.guide-icon {
+      min-height: 100px;
+      
+      i {
+        &.fa-wordpress {
+          color: #0087be;
+        }
+
+        &.fa-diamond {
+          color: #CC342D;
+        }
+
+        &.fa-database {
+          color: #f59620;
+        }
+      }
+    }
+
+    h3 {
+      min-height: 54px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      @include inline-ul;
+      margin-top: 0;
+
+      li {
+        margin: 0 2px;
+        font-weight: bold;
+      }
+    }
+
+    p {
+      min-height: 80px;
+      text-align: left;
+    }
+
+    a {
+      @include button-large($primary, $primary, $white);
+      min-width: 200px;
+    }
+  }
 }
 
 /******************** 

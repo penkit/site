@@ -11,10 +11,12 @@ General styles
 body {
   height: 100vh;
   color: $black;
+  font-family: $body-font;
 }
 
 p {
   font-size: 17px;
+  line-height: 24px;
 }
 
 div.wrapper {
@@ -132,7 +134,6 @@ Home Page
 div.project-description {
   
   p {
-  font-family: $body-font;
   text-align: center;
   font-size: 1.3em;
   line-height: 160%;
@@ -162,7 +163,8 @@ div.project-description {
 Contact Page
 ********************/
 p.contact-cta {
-  font-size: 1.4em;
+  font-size: 1.3em;
+  margin: 40px 0;
   text-align: center;
 }
 
@@ -236,7 +238,7 @@ div.bios {
     }
 
     p {
-      height: 100px;
+      height: 135px;
       padding: 0 10px;
       box-sizing: border-box;
     }

@@ -1,6 +1,13 @@
 div.content
   h2 Install
   div.install-instructions
+    div.badges
+      markdown:
+        [![Gem Version](https://badge.fury.io/rb/penkit.svg)](https://badge.fury.io/rb/penkit)
+        [![build status](https://gitlab.com/penkit/penkit/badges/master/build.svg)](https://gitlab.com/penkit/penkit/commits/master)
+        [![coverage report](https://gitlab.com/penkit/penkit/badges/master/coverage.svg)](https://gitlab.com/penkit/penkit/commits/master)
+        [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/legal/LICENSE.txt)
+    
     markdown:
       Penkit has only a couple of requirements and three different install options.
 
@@ -35,6 +42,6 @@ div.content
       wget -O /usr/local/bin/penkit https://gitlab.com/penkit/penkit/raw/master/scripts/penkit
       chmod +x penkit
       penkit  help
-      ```
+        ```
   p.guides-cta Now that you've installed penkit, try our guides.
   a class="guides" href="/guides" Guides

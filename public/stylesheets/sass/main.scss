@@ -16,7 +16,7 @@ body {
 
 p {
   font-size: 17px;
-  line-height: 24px;
+  line-height: 25px;
 }
 
 div.wrapper {
@@ -43,8 +43,6 @@ h4 {
 }
 
 code, pre {
-  padding: 3px 6px;
-  margin: 0 10px;
   background-color: $gray-light;
   border: 1px solid $gray;
   font-size: 16px;
@@ -53,7 +51,14 @@ code, pre {
 }
 
 pre {
+  margin: 0 10px;
+  padding: 3px 6px;
   line-height: 25px;
+}
+
+code {
+  padding: 0 3px;
+  margin: 0 1px;
 }
 
 div.content {
@@ -238,7 +243,7 @@ div.bios {
     }
 
     p {
-      height: 135px;
+      height: 110px;
       padding: 0 10px;
       box-sizing: border-box;
     }
@@ -320,7 +325,14 @@ div.guides {
 /******************** 
 Guide Page
 ********************/
+p.bread-crumbs {
+  width: 100%;
+  text-align: left;
+}
+
 div.guide, div.install-instructions {
+  width: 100%;
+  
   h1, h2, h3, h4, h5, h6 {
     span {
       display: none;
@@ -366,4 +378,3 @@ div.oops {
     @include button-large($primary, $primary, $white);
   }
 }
-

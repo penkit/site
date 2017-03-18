@@ -44,17 +44,20 @@ $ penkit ping vsftpd
 We will use `penkit nmap` to see if our target is vulnerable:
 
 ```bash
-$ penkit nmap -sV penkit
-Starting Nmap 6.47 ( http://nmap.org ) at 2017-03-15 12:08 EDT
-Nmap scan report for penkit
-Host is up (0.00029s latency).
+$ penkit nmap -sV vsftpd
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2017-03-18 18:40 UTC
+Nmap scan report for vsftpd (172.23.0.2)
+Host is up (0.000012s latency).
+rDNS record for 172.23.0.2: vsftpd.penkit
 Not shown: 999 closed ports
 PORT   STATE SERVICE VERSION
 21/tcp open  ftp     vsftpd 2.3.4
+MAC Address: 02:42:AC:17:00:02 (Unknown)
 Service Info: OS: Unix
 
-Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 0.18 seconds
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1.94 seconds
 ```
 
 If the version is `vsftpd 2.3.4` then there is a chance that this particular instance of vsftpd is patched with the backdoor.

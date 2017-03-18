@@ -2,7 +2,7 @@ FROM dhumphreys88/ruby:2.3
 
 MAINTAINER Sam Lachance <slachance@gmail.com>
 
-RUN apk add --no-cache ruby-dev build-base
+RUN apk add --no-cache ruby-dev build-base zlib-dev
 
 # Install gems
 COPY Gemfile* /opt/ruby/

@@ -1,3 +1,5 @@
+require './lib/gitlab_issue.rb'
+
 get '/' do
   slim :index
 end
@@ -32,6 +34,22 @@ get '/guides/:guide' do
   end
   
   slim :guide
+end
+
+get '/bug' do
+  slim :bug
+end
+
+get '/feedback' do
+  slim :feedback
+end
+
+post '/feedback' do
+  token = ENV["GITLAB_PRIV_TOKEN"]
+  project_id = 2948448
+  issue = GitlabIssue.new(token, project_id, params)
+  issue.send
+  redirect to "/"
 end
 
 not_found do

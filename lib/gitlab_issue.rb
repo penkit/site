@@ -17,7 +17,7 @@ class GitlabIssue
     http = create_http # Create HTTP object
     set_ssl(http) # Sets SSL settings
     req = create_request # Create HTTP post object
-    req.body =  URI.encode_www_form({ title: data[:title], 
+    req.body =  URI.encode_www_form({ title: data[:title],
                                       description: format_body(data),
                                       confidential: true,
                                       milestone_id: milestone_id,

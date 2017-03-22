@@ -371,6 +371,39 @@ p.guides-cta {
   text-align: center;
 }
 
+/******************** 
+Bug / Feedback Page
+********************/
+
+form {
+  margin: 30px 0;
+  width: 50%;
+  label, input {
+    display: block;
+    width: 100%;
+  }
+  
+  input {
+    box-sizing: border-box;
+    margin: 5px 0 20px;
+    padding: 7px;
+  }
+}
+
+div.thankyou {
+  display: none;
+  text-align: center;
+
+  p {
+    font-size: 1.8em;
+  }
+
+  a {
+    @include button-large($primary, $primary, $white);
+    display: inline-block;
+  }
+}
+
 
 /******************** 
 404 Page
@@ -379,7 +412,7 @@ div.oops {
   text-align: center;
   
   h2 {
-    font-size: 6em;  
+    font-size: 6em; 
   }
 
   a {

@@ -1,14 +1,14 @@
 require 'net/http'
 require 'openssl'
-require 'json'
 
 class GitlabIssue
-  attr_accessor :project_id, :private_token, :data
+  attr_accessor :project_id, :private_token, :data, :milestone_id
 
-  def initialize(private_token, project_id, data)
+  def initialize(private_token, project_id, milestone_id, data)
     @data = data
     @private_token = private_token
     @project_id = project_id
+    @milestone_id = milestone_id
     @uri = get_uri("https://gitlab.com/api/v4/projects/#{@project_id}/issues")
   end
   
@@ -19,7 +19,9 @@ class GitlabIssue
     req = create_request # Create HTTP post object
     req.body =  URI.encode_www_form({ title: data[:title], 
                                       description: format_body(data),
-                                      confidential: true
+                                      confidential: true,
+                                      milestone_id: milestone_id,
+                                      labels: "user/feedback#{ ", flag/bug" if data[:type] == "bug" }"
                                     })
     req.add_field("PRIVATE-TOKEN", @private_token)
     http.request(req) # Sends post
@@ -45,7 +47,7 @@ class GitlabIssue
     end
 
     def format_body(data)
-      data.drop(1).map{|k,v| "## #{k.capitalize.gsub('-', ' ')}  \n#{v}  \n"}.join  
+      data.drop(2).map{|k,v| "## #{k.to_s.capitalize.gsub('-', ' ')}  \n#{v.strip}  \n"}.join  
     end
 end
 

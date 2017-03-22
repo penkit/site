@@ -45,9 +45,10 @@ get '/feedback' do
 end
 
 post '/feedback' do
-  token = ENV["GITLAB_PRIV_TOKEN"]
-  project_id = 2948448
-  issue = GitlabIssue.new(token, project_id, params)
+  token = ENV["PENNY_GITLAB_TOKEN"]
+  project_id = 2776350 # penkit/penkit
+  milestone_id = 287139 # User feedback milestone
+  issue = GitlabIssue.new(token, project_id, milestone_id , params)
   issue.send
   redirect to "/"
 end

@@ -1,52 +1,85 @@
 div.content
   h2 Bug Report
+  p.instructions This best way to help the project is to tell us if we got it wrong. Submitting a bug report will create a private issue in GitLab. 
+  == slim :_thankyou
   form action="/feedback" method="post" class="bug"
-    label for="title" Title: 
-    br/
+    label for="title" Title   
     <input type="text" name="title" required>
-    br/
-    br/
 
-    label for="OS" Operating System:  
-    br/
-    <input type="text" name="OS" required>
-    br/
-    br/
-
-    label for="version" Penkit Version:
-    br/
-    <input type="text" name="version" required>
-    br/
-    br/
-
-    label for="steps-to-reproduce" Steps to reproduce:
-    br/
+    input type="hidden" name="type" value="bug"/
+    
+    label for="os-version" Operating System
+    <input type="text" name="os-version" required>
+    
+    label for="penkit-version" Penkit Version
+    <input type="text" name="penkit-version" required>
+  
+    label for="docker-version" Docker Version
+    <input type="text" name="docker-version">
+    
+    label for="ruby-version" Ruby Version
+    <input type="text" name="ruby-version">
+    
+    label for="steps-to-reproduce" Steps to reproduce
     <input type="text" name="steps-to-reproduce" required>
-    br/
-    br/
-
-    label for="expected-outcome" Expected Outcome:
-    br/
+    
+    label for="expected-outcome" Expected Outcome
     <input type="text" name="expected-outcome" required>
-    br/
-    br/
-
-    label for="actual-outcome" Actual Outcome:
-    br/
+    
+    label for="actual-outcome" Actual Outcome
     <input type="text" name="actual-outcome" required>
-    br/
-    br/
-
-    label for="other" Other:
-    br/
+    
+    label for="other" Other:    
     <input type="text" name="other">
-    br/
-    br/
-
-    label for="email" Email (optional): 
-    br/
+    
+    label for="email" Email (optional):     
     input type="text" name="email"/
-    br/
-    br/
       
     input type="submit"/
+  
+javascript:
+
+  function sendFeedback(data) {
+    $.ajax({
+      type: "POST",
+      url: "/feedback",
+      dataType: "json",
+      data: data,
+      encode: true
+    });
+  }
+
+  function collectData() {
+    var data = {}
+    
+    data["type"] = $("form input[name=type]").val()
+
+    $("form input[type=text]").each(function(){
+      if (this.value == "") {
+        this.value = "(none)"
+      }
+
+      data[this.name] = this.value;
+    });
+
+
+    return data;
+  }
+
+  function renderThankyou() {
+    $("div.thankyou").css("display", "block");
+    $("form").css("display", "none");
+    $("p.instructions").css("display", "none");
+    $("h2").css("display", "none");
+  }
+
+  $("form").submit(function(event) {
+
+    var data = collectData();
+
+    sendFeedback(data);
+
+    event.preventDefault();
+
+    renderThankyou();
+  });

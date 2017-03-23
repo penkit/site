@@ -194,12 +194,12 @@ ul.contact-methods {
 a.contact-link {
   display: block;
   text-align: center;
-  width: 160px;
+  width: 170px;
 
   div.icon-container {
     border: 3px solid $primary;
     width: 100px;
-    margin: 0 30px;
+    margin: 0 35px;
     height: 100px;
     border-radius: 50%;
     box-sizing: border-box;
@@ -371,6 +371,74 @@ p.guides-cta {
   text-align: center;
 }
 
+/******************** 
+Bug / Feedback Page
+********************/
+div.bug {
+  p.instructions {
+    text-align: center;
+  }
+}
+form {
+  text-align: center;
+  margin: 30px 0;
+  width: 70%;
+
+  label, input {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  div.basic-info{
+    overflow: auto;
+    div.basic-info-field {
+      width: calc(50% - 10px);
+      float: left;
+
+      &:nth-child(2n + 1) {
+        margin-right: 20px;
+      }
+    }
+  }
+  
+  input, textarea {
+    box-sizing: border-box;
+    margin: 5px 0 20px;
+    padding: 7px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100px;
+  }
+
+  input[type=submit] {
+    @include button-large($primary, $primary, $white);
+    cursor: pointer;
+    display: inline-block;
+    width: auto;
+  }
+
+  span.optional {
+    color: $gray;
+  }
+}
+
+div.thankyou {
+  display: none;
+  text-align: center;
+
+  p {
+    font-size: 1.8em;
+  }
+
+  a {
+    @include button-large($primary, $primary, $white);
+    display: inline-block;
+  }
+}
+
 
 /******************** 
 404 Page
@@ -379,7 +447,7 @@ div.oops {
   text-align: center;
   
   h2 {
-    font-size: 6em;  
+    font-size: 6em; 
   }
 
   a {

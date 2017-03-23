@@ -1,0 +1,20 @@
+div.content.bug
+  h2 Feedback
+  p.instructions Please feel free to request a feature, make a suggestion, or tell us what you think about the project. Submitting feedback will create a private issue in GitLab.
+  == slim :_thankyou
+  form action="/feedback" method="post" class="feedback"
+    label for="title" Title   
+    <input type="text" name="title" required>
+
+    input type="hidden" name="type" value="feedback"/
+    
+    label for="comment" Feedback
+    <textarea type="text" name="comment" required></textarea>
+    
+    label for="email" 
+      | Email <span class="optional">(optional)</span>
+    input type="text" name="email"/
+      
+    input type="submit"/
+  
+script src="javascript/feedback.js"

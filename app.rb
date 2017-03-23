@@ -1,3 +1,5 @@
+require './lib/gitlab_issue.rb'
+
 get '/' do
   slim :index
 end
@@ -32,6 +34,23 @@ get '/guides/:guide' do
   end
   
   slim :guide
+end
+
+get '/bug' do
+  slim :bug
+end
+
+get '/feedback' do
+  slim :feedback
+end
+
+post '/feedback' do
+  token = ENV["PENNY_GITLAB_TOKEN"]
+  project_id = 2776350 # penkit/penkit
+  milestone_id = 287139 # User feedback milestone
+  issue = GitlabIssue.new(token, project_id, milestone_id , params)
+  issue.send
+  redirect to "/"
 end
 
 not_found do

@@ -9,6 +9,8 @@ COPY Gemfile* /opt/ruby/
 RUN bundle install
 COPY . /opt/ruby/
 
+RUN chown -R ruby:ruby /opt/ruby/
+
 # Start server
 EXPOSE 8080
 CMD ["rackup", "-o", "0.0.0.0", "-p", "8080"]

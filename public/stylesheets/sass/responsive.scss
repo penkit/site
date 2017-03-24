@@ -5,6 +5,15 @@
 }
 
 @media only screen and (max-width: 500px) {
+  nav {
+    ul {
+      li {
+        min-width: auto;
+        margin: 0 4px;
+      }
+    }
+  }
+
   div.bios {
     div.bio {
       width: 100%;
@@ -37,7 +46,7 @@
   footer {
     ul.project-links {
       li {
-        margin: 0 15px;
+        margin: 0 8px;
       }
     }
   }

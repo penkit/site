@@ -4,6 +4,12 @@ All notable changes to the Penkit website will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## Unreleased
+
+### Added
+
+- Drupalgeddon guide
+
 ## [2017.03.24]
 
 ### Added

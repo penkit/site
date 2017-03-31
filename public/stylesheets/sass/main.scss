@@ -300,6 +300,10 @@ div.guides {
       min-height: 100px;
       
       i {
+        &.fa-drupal {
+          color: #0678be
+        }
+
         &.fa-wordpress {
           color: #0087be;
         }

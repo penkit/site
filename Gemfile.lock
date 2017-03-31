@@ -5,7 +5,9 @@ GEM
       nokogiri
       rdoc-rouge
       sinatra
+    json (2.0.3)
     mini_portile2 (2.1.0)
+    multi_json (1.12.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     rack (1.6.4)
@@ -22,6 +24,9 @@ GEM
       rack (~> 1.5)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
+    sinatra-json (0.1.0)
+      multi_json (~> 1.0)
+      sinatra (~> 1.0)
     slim (3.0.7)
       temple (~> 0.7.6)
       tilt (>= 1.3.3, < 2.1)
@@ -34,8 +39,10 @@ PLATFORMS
 
 DEPENDENCIES
   glorify
+  json
   sass
   sinatra
+  sinatra-json
   slim
 
 BUNDLED WITH

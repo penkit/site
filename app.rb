@@ -48,9 +48,26 @@ post '/feedback' do
   token = ENV["PENNY_GITLAB_TOKEN"]
   project_id = 2776350 # penkit/penkit
   milestone_id = 287139 # User feedback milestone
-  issue = GitlabIssue.new(token, project_id, milestone_id , params)
-  issue.send
-  redirect to "/"
+
+  # Captcha
+  res = Net::HTTP.post_form(
+    URI.parse('https://www.google.com/recaptcha/api/siteverify'),
+    {
+      'secret' => ENV["PENKIT_CAPTCHA_SECRET"],
+      'remoteip'   => request.ip,
+      'response'   => params["g-recaptcha-response"]
+    }
+  )
+
+  body = JSON.parse(res.body)
+
+  if body["success"] == true
+    issue = GitlabIssue.new(token, project_id, milestone_id , params)
+    issue.send
+    json :success => 'true'
+  else
+    json :success => 'false'
+  end 
 end
 
 not_found do

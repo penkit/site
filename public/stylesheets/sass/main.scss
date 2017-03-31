@@ -432,11 +432,38 @@ form {
     cursor: pointer;
     display: inline-block;
     width: auto;
+
+    &:disabled {
+      background-color: $gray;
+      border-color: $gray;
+      cursor: auto;
+    }
   }
 
   span.optional {
     color: $gray;
   }
+
+  div.g-recaptcha {
+    margin-bottom: 20px;
+    
+    div {
+      margin: 0 auto;
+    }
+  }
+}
+
+i#loading {
+  display: none;
+  color: $primary;
+}
+
+p#alert {
+  display: none;
+  color: $white;
+  background-color: $error;
+  padding: 4px 10px;
+  border-radius: 3px;
 }
 
 div.thankyou {

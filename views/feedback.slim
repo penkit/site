@@ -2,6 +2,7 @@ div.content.bug
   h2 Feedback
   p.instructions Please feel free to request a feature, make a suggestion, or tell us what you think about the project. Submitting feedback will create a private issue in GitLab.
   == slim :_thankyou
+  p#alert
   form action="/feedback" method="post" class="feedback"
     label for="title" Title   
     <input type="text" name="title" required>
@@ -14,7 +15,12 @@ div.content.bug
     label for="email" 
       | Email <span class="optional">(optional)</span>
     input type="text" name="email"/
+    
+    noscript Sorry. In order to prevent spam we use reCAPTCHA which requires javascript.
+    <div class="g-recaptcha" data-sitekey="#{ENV['PENKIT_CAPTCHA_PUBLIC']}" data-callback="enableSubmit"></div>
       
-    input type="submit"/
+    input type="submit" id="submit" disabled="true"/
+  <i id="loading" class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
   
 script src="javascript/feedback.js"
+script src="javascript/captcha.js"
